@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>org.afonsocoutinho.calculadora.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+	<description>
+	  <p>Calculadora</p>
+	</description>
+</component>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Igor Gnatenko <ignatenko@src.gnome.org> -->
+<component type="desktop-application">
+  <id>@app_id@.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Calculadora</name>
+  <summary>Uma simples calculadora</summary>
+  <developer_name>Afonso Coutinho</developer_name>
+
+  <description>
+    <p>
+      Uma simples calculadora
+    </p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Quickly access your projects</caption>
+      <image width="1122" height="922">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/01-greeter.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Create new projects from a variety of templates</caption>
+      <image width="1122" height="928">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/02-template.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Integration with Git to clone your projects</caption>
+      <image width="1122" height="928">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/03-clone.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>The source code editor</caption>
+      <image width="1687" height="1114">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/04-editor.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Fast global fuzzy search</caption>
+      <image width="1687" height="1114">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/05-search.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Debug with the GNU debugger</caption>
+      <image width="1603" height="1038">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/06-debugger.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Use the minimap to see more of the file</caption>
+      <image width="1603" height="1038">https://gitlab.gnome.org/GNOME/gnome-builder/raw/8f26cd4ed585db72272e8153fd8cdc9c7681f670/data/appdata/07-minimap.png</image>
+    </screenshot>
+  </screenshots>
+  <launchable type="desktop-id">@app_id@.desktop</launchable>
+  <url type="homepage">https://wiki.gnome.org/Apps/Builder</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-builder/issues</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
+  <url type="help">https://builder.readthedocs.io</url>
+  <project_group>GNOME</project_group>
+
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>Notifications</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
+
+  <update_contact>chergert@gnome.org</update_contact>
+  <translation type="gettext">gnome-builder</translation>
+
+  <releases>
+    <release version="43.0" date="2022-09-22"/>
+  </releases>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+</component>

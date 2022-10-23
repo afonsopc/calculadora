@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>  <requires lib="Adw" version="1.0"/>  <template class="CalculadoraWindow" parent="AdwApplicationWindow">
+    <property name="default-width">350</property>
+    <property name="default-height">480</property>
+    <property name="content">
+    <object class="GtkBox">
+      <property name="orientation">vertical</property>
+      <child>
+        <object class="GtkHeaderBar" id="header_bar">
+          <style>
+            <class name="flat"/>          </style>
+          <child type="end">
+            <object class="GtkMenuButton">
+              <property name="icon-name">open-menu-symbolic</property>
+              <property name="menu-model">primary_menu</property>
+            </object>
+          </child>
+        </object>
+      </child>
+      <child>
+        <object class="GtkBox">
+          <property name="orientation">vertical</property>
+          <child>
+          <object class="GtkEntry" id="calculator_display">
+            <property name="css-classes">title-1</property>
+            <property name="accessible-role">note</property>
+            <property name="focusable">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+          </object>
+          </child>
+          <child>
+            <object class="GtkGrid">
+              <property name="css-classes">title-3</property>
+              <property name="column-spacing">5</property>
+              <property name="hexpand">True</property>
+              <property name="margin-bottom">10</property>
+              <property name="margin-end">10</property>
+              <property name="margin-start">10</property>
+              <property name="margin-top">10</property>
+              <property name="row-spacing">5</property>
+              <property name="vexpand">True</property>
+              <child>
+                <object class="GtkButton" id="percentage_button">
+                <signal name="clicked" handler="on_percentage_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">%</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">0</property>
+                    <property name="column-span">1</property>
+                    <property name="row">0</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="exponent_button">
+                  <signal name="clicked" handler="on_exponent_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">xⁿ</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">1</property>
+                    <property name="column-span">1</property>
+                    <property name="row">0</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="squared_button">
+                  <signal name="clicked" handler="on_squared_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">√</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">2</property>
+                    <property name="column-span">1</property>
+                    <property name="row">0</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="pi_button">
+                  <signal name="clicked" handler="on_pi_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">π</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">3</property>
+                    <property name="column-span">1</property>
+                    <property name="row">0</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="0_button">
+                  <signal name="clicked" handler="on_0_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">0</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">0</property>
+                    <property name="column-span">1</property>
+                    <property name="row">4</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="1_button">
+                <signal name="clicked" handler="on_1_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">1</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">0</property>
+                    <property name="column-span">1</property>
+                    <property name="row">3</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="4_button">
+                  <signal name="clicked" handler="on_4_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">4</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">0</property>
+                    <property name="column-span">1</property>
+                    <property name="row">2</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="7_button">
+                <signal name="clicked" handler="on_7_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">7</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">0</property>
+                    <property name="column-span">1</property>
+                    <property name="row">1</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="clear_button">
+                  <signal name="clicked" handler="on_clear_button" swapped="no"/>                  <property name="css-classes">destructive-action</property>
+                  <property name="hexpand">True</property>
+                  <property name="icon-name">edit-clear-symbolic</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">4</property>
+                    <property name="column-span">1</property>
+                    <property name="row">0</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="8_button">
+                  <signal name="clicked" handler="on_8_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">8</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">1</property>
+                    <property name="column-span">1</property>
+                    <property name="row">1</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="5_button">
+                  <signal name="clicked" handler="on_5_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">5</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">1</property>
+                    <property name="column-span">1</property>
+                    <property name="row">2</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="9_button">
+                  <signal name="clicked" handler="on_9_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">9</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">2</property>
+                    <property name="column-span">1</property>
+                    <property name="row">1</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="parentheses_button">
+                <signal name="clicked" handler="on_parentheses_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">()</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">3</property>
+                    <property name="column-span">1</property>
+                    <property name="row">1</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="2_button">
+                  <signal name="clicked" handler="on_2_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">2</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">1</property>
+                    <property name="column-span">1</property>
+                    <property name="row">3</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="dot_button">
+                  <signal name="clicked" handler="on_dot_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">.</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">1</property>
+                    <property name="column-span">1</property>
+                    <property name="row">4</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="6_button">
+                  <signal name="clicked" handler="on_6_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">6</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">2</property>
+                    <property name="column-span">1</property>
+                    <property name="row">2</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="sen_button">
+                  <signal name="clicked" handler="on_sen_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">sen</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">4</property>
+                    <property name="column-span">1</property>
+                    <property name="row">1</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="division_button">
+                  <signal name="clicked" handler="on_division_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">/</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">3</property>
+                    <property name="column-span">1</property>
+                    <property name="row">2</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="3_button">
+                  <signal name="clicked" handler="on_3_button" swapped="no"/>                  <property name="css-classes">opaque</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">3</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">2</property>
+                    <property name="column-span">1</property>
+                    <property name="row">3</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="plus_button">
+                  <signal name="clicked" handler="on_plus_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">+</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">2</property>
+                    <property name="column-span">1</property>
+                    <property name="row">4</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="cos_button">
+                  <signal name="clicked" handler="on_cos_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">cos</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">4</property>
+                    <property name="column-span">1</property>
+                    <property name="row">2</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="minus_button">
+                  <signal name="clicked" handler="on_minus_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">-</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">3</property>
+                    <property name="column-span">1</property>
+                    <property name="row">3</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="multiply_button">
+                  <signal name="clicked" handler="on_multiply_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">×</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">3</property>
+                    <property name="column-span">1</property>
+                    <property name="row">4</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="tan_button">
+                  <signal name="clicked" handler="on_tan_button" swapped="no"/>
+                  <property name="hexpand">True</property>
+                  <property name="label">tan</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">4</property>
+                    <property name="column-span">1</property>
+                    <property name="row">3</property>
+                    <property name="row-span">1</property>
+                  </layout>
+                </object>
+              </child>
+              <child>
+                <object class="GtkButton" id="equals_button">
+                  <signal name="clicked" handler="on_equals_button" swapped="no"/>
+                  <property name="css-classes">suggested-action</property>
+                  <property name="hexpand">True</property>
+                  <property name="label">=</property>
+                  <property name="vexpand">True</property>
+                  <layout>
+                    <property name="column">4</property>
+                    <property name="row">4</property>
+                  </layout>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </child>
+    </object>
+  </property>
+</template>
+  <menu id="primary_menu">
+    <section>
+      <!--item!-->
+        <!--attribute name="label" translatable="yes">_Preferences</attribute!-->
+        <!--attribute name="action">app.preferences</attribute!-->
+      <!--/item!-->
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Calculadora</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

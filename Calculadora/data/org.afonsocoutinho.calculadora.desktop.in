@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Calculadora
+Exec=calculadora
+Icon=org.afonsocoutinho.calculadora
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

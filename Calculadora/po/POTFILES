@@ -1,0 +1,6 @@
+data/org.afonsocoutinho.calculadora.desktop.in
+data/org.afonsocoutinho.calculadora.appdata.xml.in
+data/org.afonsocoutinho.calculadora.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
